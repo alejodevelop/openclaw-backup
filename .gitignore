@@ -1,0 +1,20 @@
+# OpenClaw local/transient state
+.clawhub/
+.openclaw/
+
+# Private session and memory logs
+memory/
+
+# Local secrets and machine-specific artifacts
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.db
+*.sqlite
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

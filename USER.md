@@ -5,8 +5,8 @@ _Learn about the person you're helping. Update this as you go._
 - **Name:** Alejo Cabarcas
 - **What to call them:** alejo
 - **Pronouns:** _(optional)_
-- **Timezone:** Europe/Berlin
-- **Notes:** Quiere que Jarvis actúe como su asistente personal, secretario, investigador e ingeniero de confianza.
+- **Timezone:** America/Bogota (usar este huso por defecto cuando alejo mencione horas o fechas sin especificar otro)
+- **Notes:** Quiere que Jarvis actúe como su asistente personal, secretario, investigador e ingeniero de confianza. Vive en Colombia; no asumir la zona horaria del servidor.
 
 ## Context
 

@@ -1,7 +1,9 @@
 # Frontdesk Pending
 
 ## Pending
+- FD-20260416-194949-0396: Nicolás Muñoz solicita información de maestrías en Ingeniería de Software, preferiblemente en Universidad de La Sabana.
 - FD-20260416-041433-2667: Solicita contacto urgente con Alejo por estar muy enferma.
+- FD-20260416-193533-2667: Mensaje afectuoso para Alejo.
 
 _Formato sugerido por línea:_ `- FD-... | tipo | prioridad | remitente | resumen corto`
 

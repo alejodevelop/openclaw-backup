@@ -1,6 +1,8 @@
 # OpenClaw local/transient state
 .clawhub/
 .openclaw/
+frontdesk/.openclaw/
+tmp/
 
 # Private session and memory logs
 memory/

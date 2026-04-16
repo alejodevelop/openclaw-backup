@@ -34,3 +34,11 @@ Each entry includes:
 - **Context** — What triggered it
 - **Count** — How many times (for promotion tracking)
 - **Action** — Where it was stored (if promoted)
+
+## 2026-04-16
+
+### 04:10 — Frontdesk inbox enforcement
+- **Correction:** For frontdesk intake, a natural-language prompt was not enough to make the agent register tickets. Use a mandatory step-by-step protocol with explicit inbox triggers and required tool actions before any user-visible reply.
+- **Context:** WhatsApp frontdesk handled an urgent message from Alejo's girlfriend but replied without creating a ticket, updating the queue, or notifying Alejo.
+- **Count:** 1 (first occurrence)
+- **Action:** Hardened `frontdesk/AGENTS.md` and `frontdesk/TOOLS.md` with required execution order, urgent examples, and no-promise-on-failure rules.

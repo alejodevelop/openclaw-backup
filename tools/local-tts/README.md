@@ -111,18 +111,20 @@ Uso esperado por chat:
 
 ## Alternancia de modo
 
-A nivel de producto, la intención es:
-- si el chat está en `text`, Jarvis responde por texto
-- si el chat está en `audio`, Jarvis responde con la ruta local TTS
+Para uso diario en Telegram, usar los comandos nativos de OpenClaw:
 
-**Importante:**
-La ruta local ya funciona y se probó con envíos reales, pero la integración nativa final con `/tts` de OpenClaw todavía necesita un ajuste adicional para quedar completamente enchufada al provider local.
+- `/tts on` → activa respuestas en audio
+- `/tts off` → desactiva respuestas en audio
+- `/tts status` → muestra el estado actual
+
+La configuración local actual permite que `/tts` use el backend local configurado.
+
+También existe una capa auxiliar local basada en `state/audio-mode.json` y helpers CLI, pero no hace falta para la operación normal de Alejo.
 
 ## Pendiente
 
-- terminar el enganche nativo de OpenClaw para que el modo audio no dependa de la ruta manual/local intermedia
-- dejar persistente el servicio local de TTS mediante systemd o un supervisor equivalente
-- conectar el cambio de modo texto/audio a un comando simple de usuario
+- dejar persistente el servicio local de TTS mediante systemd o un supervisor equivalente más formal
+- opcional: exponer un alias más bonito tipo `/modo_audio` o `/modo_texto`, pero solo si de verdad aporta valor frente a `/tts on|off`
 
 ## Notas
 

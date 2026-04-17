@@ -7,12 +7,22 @@ Tener dos modos sencillos para Jarvis por chat:
 - **texto**: responde solo por escrito
 - **audio**: responde con nota de voz generada localmente
 
-## Estado actual
+## Conmutador recomendado en Telegram
 
-La síntesis local ya funciona y puede generar/enviar audios reales.
+La forma simple y correcta es usar el comando nativo de OpenClaw:
 
-El archivo de estado previsto es:
+- `/tts on` → activa respuestas en audio
+- `/tts off` → vuelve a respuestas en texto
+- `/tts status` → muestra el estado actual
+
+Esto ya funciona con el backend local configurado.
+
+## Estado local adicional
+
+Sigue existiendo un archivo de estado auxiliar:
 - `state/audio-mode.json`
+
+Ese archivo sirve como referencia operativa local, pero para Telegram el conmutador recomendado es `/tts on` y `/tts off`.
 
 Ejemplo de estructura:
 
@@ -27,21 +37,20 @@ Ejemplo de estructura:
 }
 ```
 
-## Operación manual actual
+## Alternativa manual/local
 
-Hasta cerrar el enganche nativo final, la forma conceptual de alternar es:
+También existen helpers locales:
 
-- poner `mode: text` → respuestas normales por texto
-- poner `mode: audio` → respuestas por audio usando la ruta local
+```bash
+bash tools/local-tts/mode.sh telegram:6382026695 text
+bash tools/local-tts/mode.sh telegram:6382026695 audio
+```
 
-## Comandos deseados
+Pero para el uso diario de Alejo en Telegram, preferir `/tts on` y `/tts off`.
 
-La intención final es exponer algo tipo:
+## Sobre comandos tipo `/text_mode`
 
-- `/modo texto`
-- `/modo audio`
-
-O equivalente dentro de OpenClaw.
+Técnicamente podrían añadirse entradas de menú o una skill específica, pero no hace falta para resolver el caso de uso y añade complejidad innecesaria. La solución más limpia es reutilizar `/tts`.
 
 ## Voz actual recomendada
 

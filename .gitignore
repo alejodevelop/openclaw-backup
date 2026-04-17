@@ -20,3 +20,10 @@ memory/
 # OS/editor noise
 .DS_Store
 Thumbs.db
+
+# Local TTS generated/runtime artifacts
+logs/
+tools/local-tts/bin/
+tools/local-tts/tmp/
+tools/local-tts/voices/
+state/audio-mode.json

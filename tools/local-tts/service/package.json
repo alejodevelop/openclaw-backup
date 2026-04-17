@@ -1,0 +1,10 @@
+{
+  "name": "local-tts-openai-compatible",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Local OpenAI-compatible TTS endpoint backed by Piper",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

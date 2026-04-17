@@ -1,6 +1,8 @@
 # Frontdesk Pending
 
 ## Pending
+- FD-20260417-165330-0396 Nicolás Muñoz: Recordar a Alejo sobre las transcripciones de la reunión de Hases.
+- FD-20260417-042900-2667: El remitente extraña a Alejo y solicita respuesta
 - FD-20260416-194949-0396: Nicolás Muñoz solicita información de maestrías en Ingeniería de Software, preferiblemente en Universidad de La Sabana.
 - FD-20260416-041433-2667: Solicita contacto urgente con Alejo por estar muy enferma.
 - FD-20260416-193533-2667: Mensaje afectuoso para Alejo.

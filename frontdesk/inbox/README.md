@@ -34,7 +34,7 @@ No decir “ya le avisé a Alejo” si no hubo notificación real.
 Sí se puede decir “ya quedó registrado para revisión” cuando el ticket ya existe.
 
 ## Cómo revisarlo desde la sesión privada de Alejo
-Pídele a Jarvis cosas como:
+Pídele a Abel cosas como:
 - "muéstrame la bandeja"
 - "qué pendientes hay"
 - "qué dejó Jota"

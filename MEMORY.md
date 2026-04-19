@@ -7,7 +7,7 @@
 - When alejo mentions a time or date without another timezone, interpret it in `America/Bogota` by default.
 
 ## Operational Setup
-- 2026-04-15: Alejo created a dedicated agent account `alejo.ai.agent@gmail.com` for Jarvis operational use across Google/GitHub. Treat it as part of the agent environment.
+- 2026-04-15: Alejo created a dedicated agent account `alejo.ai.agent@gmail.com` for Abel operational use across Google/GitHub. Treat it as part of the agent environment.
 - 2026-04-15: Do not store or re-emit credentials for the dedicated agent account in git, tracked workspace files, routine chat replies, or general memory unless explicitly necessary.
 - 2026-04-15: The workspace backup remote is `git@github.com:alejodevelop/openclaw-backup.git`, using SSH auth from this host.
 - Credentials and secrets may exist in dedicated operational storage/secure locations, but should not be duplicated casually into workspace notes or summaries.
@@ -32,7 +32,7 @@
 - Important limitation: with the CLI available at that moment, creating Meet on new events worked, but directly adding Meet to an already-existing event was not exposed cleanly through the `gog calendar update` path that was tested.
 
 ## Music Control
-- 2026-04-17: Alejo wants Jarvis to have a durable server-side capability to observe and control music playback, not just one-off checks.
+- 2026-04-17: Alejo wants Abel to have a durable server-side capability to observe and control music playback, not just one-off checks.
 - Google App Password works for SMTP/IMAP on the dedicated Gmail account, but not for interactive Google web sessions like YouTube Music.
 - OAuth plus YouTube Music web/API was not sufficient for reliable now-playing or remote device control in this environment; headless browser automation against YouTube Music was not dependable.
 - A server-side persistent Chromium session with virtual display was set up and authenticated manually once, creating a reusable authenticated browser surface on the server.

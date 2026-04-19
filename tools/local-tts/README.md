@@ -1,10 +1,10 @@
-# Local TTS for Jarvis
+# Local TTS for Abel
 
 TTS local en el servidor, sin depender de un proveedor pago externo.
 
 ## Objetivo
 
-Permitir que Jarvis responda en audio usando síntesis local, con dos modos de uso:
+Permitir que Abel responda en audio usando síntesis local, con dos modos de uso:
 - **modo texto**: responde solo en texto
 - **modo audio**: responde con nota de voz generada localmente
 
@@ -49,7 +49,7 @@ Campos principales:
 
 ## Resultado actual elegido
 
-La base preferida para Jarvis quedó así:
+La base preferida para Abel quedó así:
 - **voz base**: `es_ES-davefx-medium`
 - **perfil preferido**: `male_serene`
 
@@ -78,7 +78,7 @@ curl -s http://127.0.0.1:8091/healthz
 
 ```bash
 cat <<'EOF' >/tmp/test.txt
-Hola Alejo. Soy Jarvis.
+Hola Alejo. Soy Abel.
 EOF
 
 bash tools/local-tts/say.sh opus /tmp/test.ogg es_ES-davefx-medium /tmp/test.txt
@@ -92,7 +92,7 @@ curl -sS \
   -H 'Content-Type: application/json' \
   -d '{
     "model": "local-piper",
-    "input": "Hola Alejo. Soy Jarvis.",
+    "input": "Hola Alejo. Soy Abel.",
     "voice": "es_ES-davefx-medium",
     "response_format": "opus",
     "profile": "male_serene"

@@ -1,6 +1,6 @@
 # YouTube Music remote-control capability
 
-Goal: let Jarvis inspect current playback and control playback for the Google account `alejo.ai.agent@gmail.com` on active devices.
+Goal: let Abel inspect current playback and control playback for the Google account `alejo.ai.agent@gmail.com` on active devices.
 
 ## Constraints discovered
 - YouTube Music blocks the default headless browser profile used by OpenClaw.
@@ -9,7 +9,7 @@ Goal: let Jarvis inspect current playback and control playback for the Google ac
 - Device nodes are not currently paired, so there is no direct phone-control path right now.
 
 ## Reliable path
-Use Alejo's own logged-in Chromium/Chrome session as a remote-debugging target, then let Jarvis attach to that browser session.
+Use Alejo's own logged-in Chromium/Chrome session as a remote-debugging target, then let Abel attach to that browser session.
 
 ### One-time setup on Alejo's machine
 1. Launch Chrome/Chromium with remote debugging enabled on a dedicated profile:
@@ -24,7 +24,7 @@ Use Alejo's own logged-in Chromium/Chrome session as a remote-debugging target, 
 3. Expose the CDP port to the server with SSH reverse tunnel:
    ssh -N -R 9222:127.0.0.1:9222 <server-user>@<server-host>
 
-4. On the server, Jarvis can then talk to the browser CDP endpoint at http://127.0.0.1:9222/json/version
+4. On the server, Abel can then talk to the browser CDP endpoint at http://127.0.0.1:9222/json/version
 
 ### What this enables
 - Read current track title / artist / album / queue from the real logged-in browser.
@@ -33,7 +33,7 @@ Use Alejo's own logged-in Chromium/Chrome session as a remote-debugging target, 
 
 ## Limits
 - True background playback control across arbitrary Google/YouTube Music devices is not exposed by a public supported API.
-- If a target device is only visible in the mobile app cast picker and not in web UI, Jarvis may not be able to transfer playback from the server alone.
+- If a target device is only visible in the mobile app cast picker and not in web UI, Abel may not be able to transfer playback from the server alone.
 
 ## Preferred alternatives
 - Pair the Android phone as an OpenClaw node for direct app/device assistance.

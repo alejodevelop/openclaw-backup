@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Tener dos modos sencillos para Jarvis por chat:
+Tener dos modos sencillos para Abel por chat:
 
 - **texto**: responde solo por escrito
 - **audio**: responde con nota de voz generada localmente

@@ -121,9 +121,19 @@ La configuración local actual permite que `/tts` use el backend local configura
 
 También existe una capa auxiliar local basada en `state/audio-mode.json` y helpers CLI, pero no hace falta para la operación normal de Alejo.
 
+## Persistencia del servicio
+
+El backend local quedó instalado como servicio de usuario systemd:
+
+- unit: `~/.config/systemd/user/local-tts.service`
+- estado esperado: `systemctl --user status local-tts.service`
+- arranque automático: **habilitado** (`enable --now`)
+- política de recuperación: `Restart=always`
+
+Esto hace que el TTS local vuelva automáticamente tras reinicios del servidor, reinicio de sesión de usuario o caída del proceso.
+
 ## Pendiente
 
-- dejar persistente el servicio local de TTS mediante systemd o un supervisor equivalente más formal
 - opcional: exponer un alias más bonito tipo `/modo_audio` o `/modo_texto`, pero solo si de verdad aporta valor frente a `/tts on|off`
 
 ## Notas

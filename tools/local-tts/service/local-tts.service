@@ -1,0 +1,17 @@
+[Unit]
+Description=Local TTS service for OpenClaw (Piper-compatible OpenAI endpoint)
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/acabarcas/.openclaw/workspace/tools/local-tts/service
+ExecStart=/usr/bin/env bash /home/acabarcas/.openclaw/workspace/tools/local-tts/run.sh
+Restart=always
+RestartSec=2
+Environment=LOCAL_TTS_HOST=127.0.0.1
+Environment=LOCAL_TTS_PORT=8091
+Environment=LOCAL_TTS_API_KEY=local-tts
+Environment=LOCAL_TTS_DEFAULT_VOICE=es_ES-davefx-medium
+
+[Install]
+WantedBy=default.target

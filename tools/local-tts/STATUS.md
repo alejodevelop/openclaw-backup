@@ -10,8 +10,14 @@
 - comparación de múltiples voces
 - perfil elegido por Alejo: base masculina `es_ES-davefx-medium` con perfil `male_serene`
 
-## Falta
+## Estado actual
 
-- conexión nativa final con el `/tts` de OpenClaw
-- persistencia tipo servicio del proceso local
-- cambio de modo texto/audio expuesto como UX simple para Alejo
+- conexión nativa con el `/tts` de OpenClaw: **operativa**
+- persistencia tipo servicio del proceso local: **operativa** mediante `systemd --user`
+- cambio de modo texto/audio para Alejo: **operativo** con `/tts on` y `/tts off`
+
+## Causa del fallo corregido
+
+- el backend local en `127.0.0.1:8091` estaba caído
+- no existía una unit persistente para levantarlo tras reinicios o caídas
+- además el TTS local por chat estaba en `off` en `~/.openclaw/settings/tts.json`
